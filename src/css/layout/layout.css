@@ -1,0 +1,372 @@
+
+/*Header*/
+header{
+    width: 100%;
+    height: 13vh;
+    background-color: var(--bg-color1);
+    box-shadow: 0px 0px 3px var(--bg-color3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+}
+header i{
+    position: absolute;
+    color: var(--font-color2);
+    padding: 20px;
+    cursor: pointer;
+}
+.back{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    font-size:1.8rem;
+}
+.menu, .person{
+    font-size: 1.5rem;
+}
+.menu{
+    right: 2%;
+}
+.person{
+    left: 6%;
+}
+.bag, .search{
+    font-size: 1.2rem;
+}
+.search{
+    right: 6%;
+}
+.bag{
+    left: 3%;
+}
+/*Elementos do header*/
+
+/*Barra de perfil*/
+.person-bar{
+    width: 20%;
+    height: auto;
+    background-color: var(--bg-color1);
+    position: fixed;
+    z-index: 1;
+    top: 13%;
+    left: 2%;
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+.person-bar.show{
+    display: flex;
+}
+.person-bar nav, .menu-bar nav{
+    width: 100%;
+    height: 100%;
+    color: var(--font-color2);
+}
+.person-bar nav ul,.menu-bar nav ul{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.person-bar nav ul a li, .menu-bar nav ul a li{
+    color: var(--font-color2);
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.person-bar nav ul a li:after, .menu-bar nav ul a li:after,
+.info-column a:after, .devs .about:after,.menu-bar section a:after{
+    content: "";
+    background-color: var(--bg-color2);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    transition: .3s;
+}
+.person-bar nav ul a li:hover:after, .menu-bar nav ul a li:hover:after, 
+.info-column a:hover:after, .devs .about:hover:after, .menu-bar section a:hover:after{
+    width: 100%;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: 1s;
+}
+.overlay.show{
+    opacity: 1;
+    z-index: 3;
+}
+/*Barra do menu*/
+.menu-bar{
+    background-color: var(--bg-color1);
+    width: 40%;
+    height: 100vh;
+    overflow-y: scroll;
+    position:fixed;
+    z-index: 3;
+    right: -40%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    transition: .5s;
+}
+.menu-bar.show{
+    right: 0;
+}
+.menu-bar .close{
+    font-size: 2rem;
+    color: var(--font-color2);
+    position: absolute;
+    right: 3%;
+    top: 3%;   
+    cursor: pointer;
+}
+.menu-bar nav{
+    padding: 15%;
+}
+.menu-bar section{
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    border-top: 1px solid rgb(168, 168, 168);
+}
+.menu-bar section a li{
+    font-size: 1.5rem;
+}
+.menu-bar section a{
+    font-size: 1.2rem;
+    color: var(--font-color2);
+    position: relative;
+}
+.menu-bar section hr{
+    width: 100%;
+    height: 2px;
+    background-color: var(--bg-color2);
+}
+/*Elementos principais do corpo*/
+
+/*footer*/
+footer{
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0px 0px 3px var(--bg-color3);
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100%;
+    box-shadow: 0px 1px 3px var(--bg-color3);
+    flex-wrap: wrap;
+}
+.info:nth-child(1){
+    grid-column: 1;    
+}
+.info:nth-child(2){
+    grid-column: 2;    
+}
+.info:nth-child(3){
+    grid-column: 3;    
+}
+.info:nth-child(4){
+    grid-column: 4;   
+}
+.info-column{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+.info-column h2{
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--font-color2);
+    position: absolute;
+    top: 10%;
+}
+.info-column a{
+    color: var(--font-color2);
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: .5s;
+}
+.info-column a:hover{
+    color: var(--font-color3);
+}
+.info-column p{
+    text-align: justify;
+    word-spacing: 0px;
+}
+.redes{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+/*Footer empresa*/
+.devs{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+}
+.devs .copyright{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    width: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+}
+.copyright a{
+    color: var(--font-color2);
+}
+.devs h4,.devs .about{
+    position: absolute;
+    right: 5%;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--font-color2);
+}
+.devs .about{
+    bottom: 35%;
+}
+.social-emp{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .logo{
+    bottom: 0%;
+}
+@media screen and (min-width: 100px) and (max-width: 600px){
+    body header{
+        width: 100vw;
+        width: 100dvw;
+        height: 10dvh;
+    }
+    body .person-bar{
+        top: 10%;
+    }
+    body .back{
+        top: -5%;
+    }
+    body footer{
+        width: 100%;
+        height: 150dvh;
+    }
+    body .info{
+        width: 100%;
+        height: 100dvh;
+        grid-template-rows: 50%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    body .info:nth-child(1){
+        grid-column: 1; 
+    }
+    body .info:nth-child(2){
+        grid-column: 2;    
+    }
+    body .info:nth-child(3){
+        grid-column: 3;    
+    }
+    body .info:nth-child(4){
+        grid-column: 4;   
+    }
+    body .info-column{
+        padding: 30px;
+        margin: -10px;
+        gap: 10px;
+        width: 200%;
+    }
+    body .info-column h2{
+        font-size: .8rem;
+        font-weight: 400;
+        color: var(--font-color2);
+        position: absolute;
+        top: 5%;
+    }
+    body .info-column a{
+        color: var(--font-color2);
+        font-size: .9rem;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: .5s;
+    }
+    body .info-column p{
+        font-size: .9rem;
+        width: 50%;
+        text-align: justify;
+        word-spacing: 0px;
+    }
+    /*Footer empresa*/
+    .devs .copyright,
+    .devs h4,.devs .about{
+        font-size: .8rem;
+        right: 2%;
+    }
+    .social-emp{
+        top: 60%;
+        left: 0%;
+        align-items: start;
+    }
+    footer .logo{
+        bottom: 0%;
+    }
+}

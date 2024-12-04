@@ -1,0 +1,48 @@
+/*Fontes Importadas*/
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Quicksand:wght@300..700&display=swap');
+/*font-family: "Quicksand", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Quicksand:wght@300..700&display=swap');
+/*font-family: "Cinzel", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&display=swap');
+/*font-family: "Afacad Flux", sans-serif;*/
+
+/*Variaveis de cores css global*/
+:root{
+    --bg-color1:#fff;
+    --bg-color2:#000;
+    --bg-color3:#575757;
+    --bg-color4:#272727;
+    --bg-color5:#d6d6d6;
+    --bg-color6:#949494;
+
+    --font-color1:#fff;
+    --font-color2:#000;
+    --font-color3:#575757;
+    --font-color4:#272727;
+    --font-color5:#d6d6d6;
+    --font-color6:#949494;
+}
+/*RESET BASICO CSS GLOBAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+/*SCROLL SUAVE DO HTML PARA LINKS ANCORADOS*/
+html{
+    width: 100vw;
+    scroll-behavior: smooth;
+}
+/*BODY RECEBE A CLASSE NO-SCROLL QUANDO FOR CLICADA-JAVASCRIPT*/
+body.no-scroll{
+    overflow: hidden;
+    overflow-x: hidden;
+}
+body{
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
