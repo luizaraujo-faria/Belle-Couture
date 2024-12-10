@@ -124,7 +124,7 @@
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    gap: 10px;
+    gap: 5px;
 }
 .card-img{
     width: 95%;
@@ -167,14 +167,12 @@
     body .card-box,
     body .prod-box{
         width: 120%;
-        height: 68%;
+        height: 86%;
         position: absolute;
-        bottom: 15%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        row-gap: 0;
         padding: 30px;
     }
     body .cards{
@@ -186,9 +184,8 @@
         gap: 0;
     }
     body .cards-prod{
-        height: 50vh;
+        height: 48vh;
     }
-
     .cards-prod:nth-child(9),
     .cards-prod:nth-child(10),
     .cards-prod:nth-child(11),

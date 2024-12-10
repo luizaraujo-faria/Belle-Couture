@@ -1,10 +1,6 @@
 /*CONTEUDO PRINCIPAL DA PAGINA*/
 .container{
-    height: 210vh;
-}
-.prod-box{
-    height: 60%;
-    top: 0;
+    height: 155vh;
 }
 .container-img{
     position: relative;
@@ -39,6 +35,9 @@
     width: 90%;
     padding: 20px;
 }
+.prod-box{
+    gap: 5px;
+}
 .filtered-img{
     filter: brightness(40%);
 }
@@ -59,12 +58,23 @@
     transition: .5s;
 }
 .filter-bar.show{
-    top: 13%;
+    top: 11%;
     z-index: 1;
 }
-.filter-bar .btn{
-    height: 1rem;
-    left: 3%;
+.filter-bar .filter-btn{
+    width: auto;
+    height: 50%;
+    border-radius: 50px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    cursor: pointer;
 }
 /*FOOTER CORES BRANCAS*/
 footer{
@@ -104,5 +114,8 @@ footer h2,.devs h4,.devs .about,.devs .copyright a,.info-column p,
     }
     .filter-bar.show{
         top: 9%;
+    }
+    body .prod-box{
+        bottom: 15%;
     }
 }
