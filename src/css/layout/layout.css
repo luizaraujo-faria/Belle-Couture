@@ -1,10 +1,9 @@
-
-/*Header*/
+/*HEADER*/
 header{
+    background-color: var(--bg-color1);
+    border-bottom: 1px solid var(--bg-color5);
     width: 100%;
     height: 13vh;
-    background-color: var(--bg-color1);
-    box-shadow: 0px 0px 3px var(--bg-color3);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -13,20 +12,21 @@ header{
     z-index: 2;
     top: 0;
 }
+/*ICONES DO HEADER*/
 header i{
     position: absolute;
-    color: var(--font-color2);
     padding: 20px;
     cursor: pointer;
 }
 .back{
     position: absolute;
-    top: 10%;
+    top: 25%;
     left: 2%;
     font-size:1.8rem;
 }
 .menu, .person{
     font-size: 1.5rem;
+    color: var(--font-color2);
 }
 .menu{
     right: 2%;
@@ -36,6 +36,7 @@ header i{
 }
 .bag, .search{
     font-size: 1.2rem;
+    color: var(--font-color2);
 }
 .search{
     right: 6%;
@@ -43,15 +44,13 @@ header i{
 .bag{
     left: 3%;
 }
-/*Elementos do header*/
-
-/*Barra de perfil*/
+/*BARRA DE PERFIL*/
 .person-bar{
     width: 20%;
     height: auto;
     background-color: var(--bg-color1);
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 13%;
     left: 2%;
     overflow: hidden;
@@ -115,7 +114,64 @@ header i{
     opacity: 1;
     z-index: 3;
 }
-/*Barra do menu*/
+/*BARRA DE PESQUISA*/
+.search-screen{
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--bg-color1);
+    position: fixed;
+    top: -50%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    transition: .5s;
+}
+.search-screen.show{
+    top: 0;
+}
+.search-bar{
+    width: 50%;
+    height: 15%;
+    border: 1px solid black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 15%;
+    padding: 20px;
+}
+.search-bar p{
+    cursor: pointer;
+}
+.search-screen hr{
+    width: 45%;
+    height: 2px;
+    background: var(--bg-color2);
+}
+.search-screen ul{
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-screen ul li{
+    font-size: 1.1rem;
+    color: var(--font-color2);
+    cursor: pointer;
+    transition: .5s;
+}
+.search-screen img{
+    bottom: 0;
+}
+.search-btn{
+    cursor: pointer;
+}
+/*BARRA DE MENU*/
 .menu-bar{
     background-color: var(--bg-color1);
     width: 40%;
@@ -133,7 +189,7 @@ header i{
 .menu-bar.show{
     right: 0;
 }
-.menu-bar .close{
+.close{
     font-size: 2rem;
     color: var(--font-color2);
     position: absolute;
@@ -168,13 +224,35 @@ header i{
     height: 2px;
     background-color: var(--bg-color2);
 }
-/*Elementos principais do corpo*/
-
-/*footer*/
+/*ELEMENTOS PRINCIPAIS DO CORPO*/
+main{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    height: 180vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-img{
+    height: 95vh;
+}
+.container-img img{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+/*FOOTER*/
 footer{
     width: 100%;
     height: 100vh;
-    box-shadow: 0px 0px 3px var(--bg-color3);
+    border-top: 1px solid var(--bg-color5);
     position: relative;
     bottom: 0;
     display: flex;
@@ -189,7 +267,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100%;
-    box-shadow: 0px 1px 3px var(--bg-color3);
+    border-bottom: 1px solid var(--bg-color5);
     flex-wrap: wrap;
 }
 .info:nth-child(1){
@@ -218,12 +296,10 @@ footer{
 .info-column h2{
     font-size: .8rem;
     font-weight: 400;
-    color: var(--font-color2);
     position: absolute;
     top: 10%;
 }
 .info-column a{
-    color: var(--font-color2);
     font-size: 1rem;
     font-weight: 400;
     cursor: pointer;
@@ -246,7 +322,7 @@ footer{
     justify-content: start;
     gap: 20px;
 }
-/*Footer empresa*/
+/*FOOTER EMPRESA*/
 .devs{
     position: absolute;
     bottom: 0;
@@ -267,15 +343,11 @@ footer{
     justify-content: center;
     gap: 30px;
 }
-.copyright a{
-    color: var(--font-color2);
-}
 .devs h4,.devs .about{
     position: absolute;
     right: 5%;
     font-size: 1rem;
     font-weight: 300;
-    color: var(--font-color2);
 }
 .devs .about{
     bottom: 35%;
@@ -288,44 +360,117 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
 }
 footer .logo{
     bottom: 0%;
 }
+/*RESPONSIVIDADE DOS LAYOUTS DA PAGINA*/
 @media screen and (min-width: 100px) and (max-width: 600px){
+    /*RESPONSIVIDADE DO HEADER*/
     body header{
         width: 100vw;
         width: 100dvw;
         height: 10dvh;
     }
+    header{
+        width: 100dvw;
+        height: 13dvh;
+    }
+    /*RESPONSIVIDADE DOS ICONES DO HEADER*/
+    header i{
+        padding: 0;
+    }
+    header .search{
+        right: 15%;
+    }
+    header .person{
+        left: 5%;
+    }
+    header .filter{
+        left: 15%;
+    }
+    header .bag{
+        display: none;
+    }
+    /*RESPONSIVIDADE DA BARRA DE MENU*/
+    header .menu{
+        font-size: 1.5rem;
+        right: 5%;
+    }
+    header .menu ul{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    body .menu-bar{
+        width: 100vw;
+        height: 100dvh;
+        right: -120%;
+    }
+    body .menu-bar .close{
+        left: 5%;
+    }
+    body .menu-bar.show{
+        right: 0%;
+    }
+    /*RESPONSIVIDADE DA BARRA DE PERFIL*/
     body .person-bar{
+        width: 45%;
+        left: 0;
+    }
+    body .person-bar.show{
         top: 10%;
     }
-    body .back{
-        top: -5%;
+    body .person-bar nav ul a li{
+        font-size: 1rem;
     }
+    /*RESPONSIVIDADE DA BARRA DE PESQUISA*/
+    .search-screen #srch-close{
+        left: 45%;
+        transform: translate(-50% -50%);
+    }
+    .search-screen.show{
+        top: 0;
+    }
+    .search-bar{
+        width: 90%;
+        height: 10%;
+        top: 25%;
+        padding: 20px;
+        gap: 10px;
+    }
+    .search-screen hr{
+        width: 100%;
+    }
+    .search-screen ul{
+        width: 100%;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .search-screen ul li{
+    font-size: .8rem;
+    }
+    /*RESPONSIVIDADE DO CONTEUDO PRINCIPAL DO CORPO*/
+    body main{
+        width: 100%;
+    }
+    body main .container{
+        width: 100%;
+        background-color: var(--bg-color1);
+    }
+    body .container-img{
+        height: 60vh;
+    }
+    /*RESPONSIVIDADE DO FOOTER*/
     body footer{
         width: 100%;
-        height: 150dvh;
+        height: 140dvh;
     }
     body .info{
         width: 100%;
         height: 100dvh;
         grid-template-rows: 50%;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    body .info:nth-child(1){
-        grid-column: 1; 
-    }
-    body .info:nth-child(2){
-        grid-column: 2;    
-    }
-    body .info:nth-child(3){
-        grid-column: 3;    
-    }
-    body .info:nth-child(4){
-        grid-column: 4;   
     }
     body .info-column{
         padding: 30px;
@@ -336,26 +481,17 @@ footer .logo{
     body .info-column h2{
         font-size: .8rem;
         font-weight: 400;
-        color: var(--font-color2);
-        position: absolute;
-        top: 5%;
+        top: 3%;
     }
     body .info-column a{
-        color: var(--font-color2);
         font-size: .9rem;
-        font-weight: 400;
-        cursor: pointer;
-        position: relative;
-        z-index: 1;
-        transition: .5s;
     }
     body .info-column p{
         font-size: .9rem;
         width: 50%;
-        text-align: justify;
-        word-spacing: 0px;
+        word-spacing:-1.8px;
     }
-    /*Footer empresa*/
+    /*RESPONSIVIDADE DO FOOTER EMPRESA*/
     .devs .copyright,
     .devs h4,.devs .about{
         font-size: .8rem;
@@ -366,7 +502,7 @@ footer .logo{
         left: 0%;
         align-items: start;
     }
-    footer .logo{
-        bottom: 0%;
+    .logo-emp{
+        display: none;
     }
 }

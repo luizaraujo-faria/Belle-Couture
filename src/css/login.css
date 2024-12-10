@@ -1,7 +1,11 @@
+/*ESTILIZAÇÕES ESPECIFICAS*/
 body{
     gap: 50px;
 }
-/*Corpo do login*/
+.back{
+    color: var(--font-color2);
+}
+/*CORPO DA PAGINA DE LOGIN*/
 .accout{
     position: relative;
     top:50%;
@@ -25,7 +29,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-/*Form cadastro*/
+/*FORM DE CADASTRO*/
 .accout .cad{
     grid-column: 1;
 }
@@ -77,7 +81,7 @@ body{
     font-weight: 500;
     transition: .5s;
 }
-/*Form login*/
+/*FORM DE LOGIN*/
 .accout .login{
     grid-column: 2;
     height: 40%;
@@ -105,18 +109,20 @@ body{
     font-size: 1rem;
     font-weight: 500;
 }
-.btn{
+.btn-login{
     width: 40%;
     height: 60px;
     border: none;
     background-color: var(--bg-color4);
     font-size: 1.5rem;
     color: var(--font-color1);
+    cursor: pointer;
     transition: .5s;
 }
-.btn:hover{
+.btn-login:hover{
     background-color: var(--bg-color2);
 }
+/*CARDS DO LOGIN*/
 .upgrade{
     position: absolute;
     bottom: 2%;
@@ -147,6 +153,24 @@ body{
     font-weight: 400;
     text-align: center;
 }
+/*FOOTER CORES PRETAS*/
+footer{
+    background-color: var(--bg-color2);
+}
+.info-column a:after, .devs .about:after{
+    background-color: var(--bg-color1);
+}
+.info-column a:hover:after, .devs .about:hover:after{
+    width: 100%;
+}
+footer h2,.devs h4,.devs .about,.devs .copyright a,.info-column p,
+.info-column a,.info-column h2{
+    color: var(--font-color1);
+}
+.info-column a:hover{
+    color: var(--font-color5);
+}
+/*RESPONSIVIDADE DA PAGINA DE LOGIN*/
 @media screen and (min-width: 100px) and (max-width: 600px) and (max-height: 900px){
     body .accout{
         height: 150dvh;
@@ -159,7 +183,7 @@ body{
         font-size: 2rem;
     }
     .cad .op-cad{
-        width: 90%;
+        width: 120%;
     }
     body .accout h2{
         font-size: 1.5rem;
@@ -171,8 +195,9 @@ body{
         width: 120%;
         font-size: 1rem;
     }
-    .btn{
+    .login button{
         width: 100%;
+        z-index: 10;
     }
     body .pros{
         display: none;

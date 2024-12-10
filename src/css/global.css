@@ -1,4 +1,4 @@
-/*Fontes Importadas*/
+/*FONTES IMPORTADAS*/
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Quicksand:wght@300..700&display=swap');
 /*font-family: "Quicksand", sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Quicksand:wght@300..700&display=swap');
@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&display=swap');
 /*font-family: "Afacad Flux", sans-serif;*/
 
-/*Variaveis de cores css global*/
+/*VARIAVEIS DE CORES CSS GLOBAL*/
 :root{
     --bg-color1:#fff;
     --bg-color2:#000;
@@ -43,6 +43,7 @@ body.no-scroll{
 }
 body{
     width: 100vw;
-    overflow: hidden;
     overflow-y: scroll;
+    overflow-X: hidden;
+    transition: .5s;
 }

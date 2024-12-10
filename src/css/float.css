@@ -1,44 +1,132 @@
 /*Introdução Empresa*/
-header h1{
-    left: 10%;
-}
-.business{
-    height: 80%;
-}
-.business.services{
+nav{
+    position: absolute;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
-.sobre{
-    grid-column: 1;
+nav ul{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
-.visual{
-    grid-column: 2;
+nav ul li a{
+    font-size: 1.5rem;
+    color: #0f92c2;
+    position: relative;
 }
-.sobre, .sobre article, .visual{
+nav ul li a:after{
+    content: "";
+    background-color: #0952cb;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    transition: .3s;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+.back{
+    color: #0f92c2;
+}
+.banner{
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: linear-gradient(45deg, #272275, #0952cb, #0f92c2, #1a61a8);
+    background-size: 300% 300%;
+    animation: degrade 5s ease infinite;
+}
+.banner h1{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color1);
+    background: linear-gradient(45deg, black, rgba(0, 0, 0, 0.575));
+    animation: degrade 5s ease infinite;
+    mix-blend-mode: multiply;
+    font-size: 10rem;
+    font-weight: 500;
+}
+@keyframes degrade {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.intro{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-}
-.sobre article{
     flex-direction: column;
-    padding: 30px;
-    gap: 30px;
 }
-.sobre article h1{
-    top: 40%;
+.banner .logo{
+    width: 15%;
+    top: 10%;
+    translate: -5% 0%;
 }
-.sobre article p{
-    font-size: 1.5rem;
-    text-align: justify;
-    color: var(--font-color2);
+.banner h2{
+    font-size: 2.5rem;
     position: absolute;
-    bottom: 20%;
-    left: 5%;
-    width: 90%;
+    color: #0f92c2;
+    bottom: 35%;
+}
+.banner p{
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #0952cb;
+    letter-spacing: -10px;
+    position: absolute;
+    translate: -50% -25%;
+    bottom: 30%;
+    transform: rotate(90deg);
+    animation: floating 2s ease infinite;
+}
+@keyframes floating {
+    0%{
+        bottom: 20%;
+    }
+    50%{
+        bottom: 22%;
+    }
+    100%{
+        bottom: 20%;
+    }
+}
+.container:nth-child(2),
+.container:nth-child(4){
+    background-color: var(--bg-color2);
+    border: 1px solid gray;
+}
+.integrantes{
+    width: 100vw;
+    height: 72vh;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--bg-color1);
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
