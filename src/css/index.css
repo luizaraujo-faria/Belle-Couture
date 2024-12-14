@@ -4,7 +4,7 @@
 }
 .container:nth-child(4),
 .container:nth-child(6){
-    height: 150vh;
+    height: 120vh;
 }
 .container:nth-child(2),
 .container:nth-child(6){

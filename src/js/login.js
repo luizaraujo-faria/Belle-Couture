@@ -4,7 +4,7 @@ function logar() {
     let login = document.getElementById('email').value
     let senha = document.getElementById('senha').value
 
-    if(login == "usuario" && senha == "senha"){
+    if(login == "cidade@melhorprofessor" && senha == "cidadelindo"){
         location.href = "index.html"
     }
     else{

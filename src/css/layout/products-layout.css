@@ -1,6 +1,6 @@
 /*CONTEUDO PRINCIPAL DA PAGINA*/
 .container{
-    height: 155vh;
+    height: 130vh;
 }
 .container-img{
     position: relative;
@@ -58,7 +58,7 @@
     transition: .5s;
 }
 .filter-bar.show{
-    top: 11%;
+    top: 9%;
     z-index: 1;
 }
 .filter-bar .filter-btn{

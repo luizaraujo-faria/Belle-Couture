@@ -63,6 +63,7 @@ const pageMap = {
     "joias": "accessories.html#jewel",
     "maquiagem": "accessories.html#makeup",
     "fragrancias": "accessories.html#fragrance",
+    "menu": "index.html",
     "coleções": "index.html#colection"
 }
 
