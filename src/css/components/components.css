@@ -39,8 +39,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    height: 8vh;
+    width: 15vw;
+    height: 5vh;
     padding: 20px;
     border-radius: 50px;
     position: absolute;
@@ -111,10 +111,9 @@
     font-weight: 300;
     color: var(--font-color1);
 }
-.cards:hover .img-radius, .cards:hover p{
-    border-radius: 35px;
-    scale: .95;
-    
+.cards:hover .card-img, .cards:hover p{
+    border-radius: 50px;
+    text-decoration: underline;
 }
 .cards-prod{
     width: 25%;
@@ -129,19 +128,20 @@
 .card-img{
     width: 95%;
     height: 85%;
-    background-image: url(../../assets/img/Scene\ 5.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
+    background-color: var(--bg-color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: .5s;
 }
 .card-img img{
-    border-radius: 30px;
+    object-fit: cover;
 }
 .prod-img{
     width: 95%;
     height: 85%;
+    background-color: var(--bg-color2);
+    border: 1px solid white;
     box-shadow: 0px 1px 3px black;
     overflow: hidden;
     position: relative;

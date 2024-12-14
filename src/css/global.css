@@ -30,6 +30,7 @@
     font-family: "Afacad Flux", sans-serif;
     text-decoration: none;
     list-style: none;
+    user-select: none;
 }
 /*SCROLL SUAVE DO HTML PARA LINKS ANCORADOS*/
 html{
