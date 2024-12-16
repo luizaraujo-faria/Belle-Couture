@@ -20,7 +20,7 @@ header i{
 }
 .back{
     position: absolute;
-    top: 25%;
+    top: 5%;
     left: 2%;
     font-size:1.8rem;
 }
@@ -368,17 +368,17 @@ footer .logo{
 @media screen and (min-width: 100px) and (max-width: 600px){
     /*RESPONSIVIDADE DO HEADER*/
     body header{
-        width: 100vw;
-        width: 100dvw;
+        width: 100%;
         height: 10dvh;
-    }
-    header{
-        width: 100dvw;
-        height: 13dvh;
+        position: absolute;
     }
     /*RESPONSIVIDADE DOS ICONES DO HEADER*/
     header i{
         padding: 0;
+    }
+    header .back{
+        top: 22%;
+        left: 7%;
     }
     header .search{
         right: 15%;
@@ -430,6 +430,10 @@ footer .logo{
         left: 45%;
         transform: translate(-50% -50%);
     }
+    .search-screen{
+        top: -60%;
+        height: 40vh;
+    }
     .search-screen.show{
         top: 0;
     }
@@ -449,7 +453,7 @@ footer .logo{
         gap: 10px;
     }
     .search-screen ul li{
-    font-size: .8rem;
+        font-size: .8rem;
     }
     /*RESPONSIVIDADE DO CONTEUDO PRINCIPAL DO CORPO*/
     body main{
@@ -465,32 +469,40 @@ footer .logo{
     /*RESPONSIVIDADE DO FOOTER*/
     body footer{
         width: 100%;
-        height: 140dvh;
+        height: 105dvh;
+        overflow: hidden;
     }
     body .info{
+        padding: 15px;
         width: 100%;
-        height: 100dvh;
-        grid-template-rows: 50%;
+        height: auto;
+        grid-template-rows: 40%;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     body .info-column{
+        width: 100%;
         padding: 30px;
         margin: -10px;
         gap: 10px;
-        width: 200%;
     }
     body .info-column h2{
         font-size: .8rem;
-        font-weight: 400;
+        font-weight: 500;
         top: 3%;
     }
     body .info-column a{
         font-size: .9rem;
     }
     body .info-column p{
+        display: none;
         font-size: .9rem;
         width: 50%;
         word-spacing:-1.8px;
+    }
+    body .redes{
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
     }
     /*RESPONSIVIDADE DO FOOTER EMPRESA*/
     .devs .copyright,
@@ -499,8 +511,8 @@ footer .logo{
         right: 2%;
     }
     .social-emp{
-        top: 60%;
-        left: 0%;
+        top: 45%;
+        left: 5%;
         align-items: start;
     }
     .logo-emp{

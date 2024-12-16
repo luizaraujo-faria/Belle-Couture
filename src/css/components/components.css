@@ -54,9 +54,16 @@
     border: 2px solid black;
     color: var(--font-color2);
 }
+.black-btn:hover{
+    background-color: rgba(0, 0, 0, 0.288);
+}
 .white-btn{
     border: 2px solid white;
     color: var(--font-color1);
+    transition: .5s;
+}
+.white-btn:hover{
+    background-color: rgba(117, 117, 117, 0.288);
 }
 /*COMPONENTES DE INPUTS*/
 .srch-inp{

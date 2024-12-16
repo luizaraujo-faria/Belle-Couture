@@ -49,25 +49,24 @@ menuClose.addEventListener('click', () => {
 
 //BARRA DE PESQUISA//
 
-//DECLARAÇÕES DE VARIÁVEIS//
+//DECLARAÇÕES DE VARIÁVEIS DA BARRA DE PESQUISA//
 const searchInp = document.querySelector('.search-input')
 const searchBtn = document.querySelector('.search-btn')
 const serachClear = document.querySelector('.search-clear')
 
-
+//OBJETO PARA IDENTIFICAR AS OPÇÕES DE PESQUISA
 const pageMap = {
+    "inicio": "index.html",
     "homens": "cathalog.html#male",
     "mulheres": "cathalog.html#female",
     "bolsas": "cathalog.html#bag",
     "relogios": "accessories.html#clock",
     "joias": "accessories.html#jewel",
     "maquiagem": "accessories.html#makeup",
-    "fragrancias": "accessories.html#fragrance",
-    "menu": "index.html",
-    "coleções": "index.html#colection"
+    "fragrancias": "accessories.html#fragrance"
 }
 
-
+//FUNÇÃO DE CLICK PARA BOTÃO REALIZAR PESQUISA
 searchBtn.addEventListener('click', () => {
     const searchTxt = searchInp.value.toLowerCase()
     const pages = pageMap[searchTxt]
@@ -79,7 +78,7 @@ searchBtn.addEventListener('click', () => {
         alert("Item não encontrado!")
     }
 })
-
+//FUNÇÃO DE CLICK PARA BOTÃO LIMPAR
 serachClear.addEventListener('click', () => {
     searchInp.value = ""
     searchInp.focus()

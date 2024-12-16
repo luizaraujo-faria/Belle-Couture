@@ -1,13 +1,18 @@
 //VERIFICAÇÃO DE LOGIN//
 
 function logar() {
-    let login = document.getElementById('email').value
-    let senha = document.getElementById('senha').value
+    const emailInp = document.getElementById('email')
+    const senhaInp = document.getElementById('senha')
+    const email = document.getElementById('email').value.toLowerCase()
+    const senha = document.getElementById('senha').value.toLowerCase()
 
-    if(login == "cidade@melhorprofessor" && senha == "cidadelindo"){
+    if(email == "cidade@melhorprofessor" && senha == "cidadelindo"){
         location.href = "index.html"
     }
     else{
         alert("email ou senha incorretos")
+        emailInp.value = ""
+        senhaInp.value = ""
+        emailInp.focus()
     }
 }

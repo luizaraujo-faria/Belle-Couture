@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--CHAMA O ICONE DA PÁGINA-->
     <link rel="shortcut icon" type="image/png" sizes="32x32" href="./src/assets/img/Logo - BC - branco.png">
-    <link rel="manifest" href="site.webmanifest">
     <title>Cathalog | BELLE COUTURE</title>
 </head>
 <body>
@@ -31,11 +30,6 @@
         <!--BARRA DE FILTRO-->
         <div class="filter-bar">
             <button class="black-btn filter-btn"e>Filtrar</button>
-        </div>
-        <!--TELA DE CARREGAMENTO-->
-        <div class="loading">
-            <img src="./src/assets/img/Logo - BC - preto.png" alt="" class="logo">
-            <div class="animation-line"></div>
         </div>
         <!--ELEMENTOS DO HEADER-->
     
@@ -78,7 +72,7 @@
             <i class="bi bi-x close" id="menu-close"></i>
             <nav>
                 <ul>
-                    <a href="./index.html"><li>MENU</li></a>
+                    <a href="./index.html"><li>INICIO</li></a>
                     <a href="./cathalog.html#male"><li>HOMENS</li></a>
                     <a href="./cathalog.html#female"><li>MULHERES</li></a>
                     <a href="./cathalog.html#bag"><li>BOLSAS</li></a>
@@ -101,7 +95,7 @@
         <!--CONTEÚDO PRINCIPAL DA PÁGINA-->
         <main>
             <section class="container-img" id="male">
-                <img src="./src/assets/banners/banner-male-1.webp" alt="banner-male">
+                <img src="./src/assets/banners/banner-male-1.webp" alt="banner-male" loading="lazy">
                 <div class="info-banner">
                     <h1 class="topico">Vestuário Masculino BC</h1>
                     <p>Apresentamos o famoso e apreciado vestuário BC Male,
@@ -144,7 +138,7 @@
                 </div>
             </section>
             <section class="container-img" id="female">
-                <img src="./src/assets/banners/banner-female-1.webp" alt="banner-female">
+                <img src="./src/assets/banners/banner-female-1.webp" alt="banner-female" loading="lazy">
                 <div class="info-banner">
                     <h1 class="topico">Vestuário Feminino BC</h1>
                     <p>Através de nossas finas e minussiosas costuras artesanais,
@@ -187,7 +181,7 @@
                 </div>
             </section>
             <section class="container-img" id="bag">
-                <img src="./src/assets/banners//banner-bag-1.webp" class="filtered-img">
+                <img src="./src/assets/banners//banner-bag-1.webp" class="filtered-img" loading="lazy">
                 <div class="info-banner">
                     <h1 class="topico">Bolsas BC</h1>
                     <p>Veja as novas bolsas confeccionadas pela famosa costura BC.

@@ -1,3 +1,25 @@
+/*TELA DE CARREGAMENTO*/
+.loading{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: .5s;
+}
+.loading.faded{
+    opacity: 0;
+    z-index: -5;
+}
+.loading .logo{
+    width: 20%;
+    opacity: 0;
+    transition: .5s;
+}
 /*CONTEUDO PRINCIPAL DA PAGINA*/
 .filtered-img{
     filter: brightness(50%);
@@ -135,14 +157,15 @@ footer h2,.devs h4,.devs .about,.devs .copyright a,.info-column p,
 }
 /*RESPONSIVIDADE DA PAGINA PRINCIPAL*/
 @media screen and (min-width: 100px) and (max-width: 600px){
-    /*RESPONSIVIDADE DE SESSÕES ESPECIFICAS*/
-    .container:nth-child(2),
-    .container:nth-child(6){
-        background-color: var(--bg-color2);
+    /*RESPONSIVIDADE TELA DE CARREGAMENTO*/
+    .loading{
+        width: 100%;
+        height: 100%;
     }
-    .container:nth-child(2) h1{
-        color: var(--font-color1);
+    .loading .logo{
+        width: 50%;
     }
+    /*RESPONSIVIDADE CARDS*/
     body .card-box{
         bottom: 15%;
     }
@@ -157,7 +180,7 @@ footer h2,.devs h4,.devs .about,.devs .copyright a,.info-column p,
     }
     .slide-title{
         font-size: 1.5rem;
-        bottom: 45%;
+        bottom: 42%;
     }
     .slide-subtitle{
         font-size: 1rem;

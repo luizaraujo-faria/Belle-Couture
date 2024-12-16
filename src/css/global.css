@@ -14,7 +14,7 @@
     --bg-color4:#272727;
     --bg-color5:#d6d6d6;
     --bg-color6:#949494;
-
+    
     --font-color1:#fff;
     --font-color2:#000;
     --font-color3:#575757;
@@ -34,17 +34,13 @@
 }
 /*SCROLL SUAVE DO HTML PARA LINKS ANCORADOS*/
 html{
-    width: 100vw;
     scroll-behavior: smooth;
 }
 /*BODY RECEBE A CLASSE NO-SCROLL QUANDO FOR CLICADA-JAVASCRIPT*/
 body.no-scroll{
     overflow: hidden;
-    overflow-x: hidden;
 }
 body{
-    width: 100vw;
-    overflow-y: scroll;
-    overflow-X: hidden;
+    width: 100%;
     transition: .5s;
 }
