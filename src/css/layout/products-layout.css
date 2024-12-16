@@ -63,9 +63,9 @@
 }
 .filter-bar .filter-btn{
     width: auto;
-    height: 50%;
+    height: 30%;
     border-radius: 50px;
-    padding: 15px;
+    padding: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +113,7 @@ footer h2,.devs h4,.devs .about,.devs .copyright a,.info-column p,
         bottom: 10%;
     }
     .filter-bar.show{
-        top: 5%;
+        top: 7%;
     }
     body .prod-box{
         bottom: 15%;
