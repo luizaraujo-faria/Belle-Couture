@@ -474,7 +474,7 @@ footer .logo{
     }
     body .info{
         padding: 15px;
-        width: 100%;
+        width: 115%;
         height: auto;
         grid-template-rows: 40%;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
