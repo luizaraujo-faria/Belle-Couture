@@ -86,10 +86,10 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
 }
 /*RESPONSIVIDADE DO LAYOUT DE PRODUTOS*/
 @media screen and (min-width: 100px) and (max-width: 600px){
-    .container-img .info-banner p{
+    .filtered-container .info-banner p{
         display: none;
     }
-    .container-img .info-banner{
+    .filtered-container .info-banner{
         left: 0;
         bottom: 0;
         width: 100%;
@@ -98,7 +98,7 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
         align-items: center;
         justify-content: center;
     }
-    .container-img .info-banner h1{
+    .filtered-container .info-banner h1{
         font-size: 2.5rem;
         position: absolute;
         bottom: 10%;
