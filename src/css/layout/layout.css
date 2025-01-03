@@ -11,12 +11,19 @@ header{
     position: fixed;
     z-index: 2;
     top: 0;
+    transition: .5s;
+}
+header.hidden{
+    transform: translateY(-110%);
 }
 /*ICONES DO HEADER*/
 header i{
     position: absolute;
     padding: 20px;
     cursor: pointer;
+}
+.filter{
+    left: 10%;
 }
 .back{
     position: absolute;
@@ -393,7 +400,8 @@ footer .logo{
     body header{
         width: 100%;
         height: 10dvh;
-        position: absolute;
+        position: fixed;
+        z-index: 3;
     }
     /*RESPONSIVIDADE DOS ICONES DO HEADER*/
     header i{
@@ -431,7 +439,7 @@ footer .logo{
         overflow-x: hidden;
     }
     body .menu-bar .close{
-        left: 5%;
+        right: 5%;
     }
     body .menu-bar.show{
         left: 0%;

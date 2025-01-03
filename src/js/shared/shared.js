@@ -11,8 +11,6 @@ let menu = document.querySelector('.menu')
 let menuBar = document.querySelector('.menu-bar')
 let search = document.querySelector('.search')
 let searchScreen = document.querySelector('.search-screen')
-let filter = document.querySelector('.filter')
-let filterBar = document.querySelector('.filter-bar')
 
 //FUNÇÃO DE CLICK PARA ICONE PERSON//
 person.addEventListener('click', () => {
@@ -61,6 +59,22 @@ const mediaQuery = window.matchMedia("(width < 640px)");{
     })
 }
 
+//EFEITO HEADER//
+let lastScroll = 0
+
+window.addEventListener('scroll', () => { 
+    let header = document.querySelector('header')
+    const currentScroll = window.scrollY
+
+    if(currentScroll > lastScroll){
+        header.classList.add('hidden')
+    }
+    else{
+        header.classList.remove('hidden')
+    }
+    lastScroll = currentScroll
+})
+
 //BARRA DE PESQUISA//
 
 //DECLARAÇÕES DE VARIÁVEIS DA BARRA DE PESQUISA//
@@ -96,9 +110,4 @@ searchBtn.addEventListener('click', () => {
 serachClear.addEventListener('click', () => {
     searchInp.value = ""
     searchInp.focus()
-})
-
-//FUNÇÃO DE CLICK PARA ICONE FILTER//
-filter.addEventListener('click', () => {
-    filterBar.classList.toggle('show')
 })

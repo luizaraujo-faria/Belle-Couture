@@ -32,41 +32,6 @@
 .filtered-img{
     filter: brightness(40%);
 }
-/*ICONE E BARRA DE FILTRO*/
-.filter{
-    left: 10%;
-}
-.filter-bar{
-    width: 100vw;
-    height: 10vh;
-    background-color: var(--bg-color1);
-    position: fixed;
-    z-index: 0;
-    top: 0%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s;
-}
-.filter-bar.show{
-    top: 9%;
-    z-index: 1;
-}
-.filter-bar .filter-btn{
-    width: auto;
-    height: 30%;
-    border-radius: 50px;
-    padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 5%;
-    bottom: 10%;
-    cursor: pointer;
-}
 /*FOOTER CORES BRANCAS*/
 footer{
     background-color: var(--bg-color1);
@@ -102,9 +67,6 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
         font-size: 2.5rem;
         position: absolute;
         bottom: 10%;
-    }
-    body .filter-bar.show{
-        top: 7%;
     }
     body .prod-box{
         bottom: 15%;
