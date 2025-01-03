@@ -15,6 +15,7 @@ let searchScreen = document.querySelector('.search-screen')
 //FUNÇÃO DE CLICK PARA ICONE PERSON//
 person.addEventListener('click', () => {
     personBar.classList.toggle('show')
+    body.classList.toggle('no-scroll')
 })
 
 //FUNÇÃO DE CLICK PARA ICONE PESQUISA//
