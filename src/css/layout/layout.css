@@ -240,6 +240,7 @@ main{
     justify-content: center;
 }
 .container-img{
+    position:relative;
     height: 95vh;
 }
 .container-img img{
@@ -247,6 +248,25 @@ main{
     height: 100%;
     position: absolute;
     object-fit: cover;
+}
+.filtered-container{
+    position:relative;
+    height: 95vh;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.filtered-container::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
 }
 /*FOOTER*/
 footer{
@@ -256,71 +276,74 @@ footer{
     position: relative;
     bottom: 0;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
-.info{
-    position: absolute;
-    top: 0;
+footer .sumario{
+    border-bottom: 1px solid var(--bg-color6);
+    position: relative;
     width: 100%;
     height: 60%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100%;
-    border-bottom: 1px solid var(--bg-color5);
-    flex-wrap: wrap;
-}
-.info:nth-child(1){
-    grid-column: 1;    
-}
-.info:nth-child(2){
-    grid-column: 2;    
-}
-.info:nth-child(3){
-    grid-column: 3;    
-}
-.info:nth-child(4){
-    grid-column: 4;   
-}
-.info-column{
-    width: 100%;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     display: flex;
     align-items: start;
     justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    padding: 60px;
-    position: relative;
-    overflow: hidden;
-}
-.info-column h2{
-    font-size: .8rem;
-    font-weight: 400;
-    position: absolute;
-    top: 10%;
-}
-.info-column a{
-    font-size: 1rem;
-    font-weight: 400;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
+    gap: 80px;
+    flex-wrap:wrap;
     transition: .5s;
 }
-.info-column a:hover{
-    color: var(--font-color3);
+.sumario .column:nth-child(1){
+    grid-column: 1;
 }
-.info-column p{
-    text-align: justify;
-    word-spacing: 0px;
+.sumario .column:nth-child(2){
+    grid-column: 2;
 }
-.redes{
+.sumario .column:nth-child(3){
+    grid-column: 3;
+}
+.sumario .column:nth-child(4){
+    grid-column: 4;
+}
+.sumario .column{
+    position: relative;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+.sumario .column .header{
     width: 100%;
-    height: 200px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 20px;
+    cursor: pointer;
+}
+.sumario .column .header h1{
+    font-size: .9rem;
+    font-weight: 400;
+}
+.sumario .column .header .close{
+    display: none;
+}
+.sumario .column ul{
+    width:100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 15px;
+}
+.sumario .column ul li{
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 300;
 }
 /*FOOTER EMPRESA*/
 .devs{
@@ -365,7 +388,7 @@ footer .logo{
     bottom: 0%;
 }
 /*RESPONSIVIDADE DOS LAYOUTS DA PAGINA*/
-@media screen and (min-width: 100px) and (max-width: 600px){
+@media screen and (width < 640px){
     /*RESPONSIVIDADE DO HEADER*/
     body header{
         width: 100%;
@@ -377,16 +400,20 @@ footer .logo{
         padding: 0;
     }
     header .back{
+        font-size: 150%;
         top: 22%;
         left: 7%;
     }
     header .search{
+        font-size: 100%;
         right: 15%;
     }
     header .person{
+        font-size: 125%;
         left: 5%;
     }
     header .filter{
+        font-size: 100%;
         left: 15%;
     }
     header .bag{
@@ -394,18 +421,14 @@ footer .logo{
     }
     /*RESPONSIVIDADE DA BARRA DE MENU*/
     header .menu{
-        font-size: 1.5rem;
+        font-size: 125%;
         right: 5%;
     }
-    header .menu ul{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-    }
     body .menu-bar{
-        width: 100vw;
+        width: 100%;
         height: 100dvh;
         right: -120%;
+        overflow-x: hidden;
     }
     body .menu-bar .close{
         left: 5%;
@@ -413,10 +436,21 @@ footer .logo{
     body .menu-bar.show{
         left: 0%;
     }
+    body .menu-bar nav ul{
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+        padding: 0;
+    }
+    .menu-bar section{
+        width: 100%;
+        align-items: start;
+        padding: 30px;
+    }
     /*RESPONSIVIDADE DA BARRA DE PERFIL*/
     body .person-bar{
         z-index: 1;
-        width: 45%;
+        width: 60%;
         left: 0;
     }
     body .person-bar.show{
@@ -448,7 +482,7 @@ footer .logo{
         width: 100%;
     }
     .search-screen ul{
-        width: 100%;
+        width: 120%;
         justify-content: space-around;
         gap: 10px;
     }
@@ -469,50 +503,84 @@ footer .logo{
     /*RESPONSIVIDADE DO FOOTER*/
     body footer{
         width: 100%;
-        height: 105dvh;
-        overflow: hidden;
-    }
-    body .info{
-        padding: 15px;
-        width: 115%;
         height: auto;
-        grid-template-rows: 40%;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    body .info-column{
-        width: 100%;
-        padding: 30px;
-        margin: -10px;
-        gap: 10px;
-    }
-    body .info-column h2{
-        font-size: .8rem;
-        font-weight: 500;
-        top: 3%;
-    }
-    body .info-column a{
-        font-size: .9rem;
-    }
-    body .info-column p{
-        display: none;
-        font-size: .9rem;
-        width: 50%;
-        word-spacing:-1.8px;
-    }
-    body .redes{
-        align-items: start;
+        display: flex;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
+        overflow: hidden;
+    }
+    footer .sumario{
+        position: relative;
+        height: auto;
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+    footer .sumario .column{
+        position: relative;
+        width: 100%;
+        max-height: 70px;
+        transition: max-height .5s ease-in-out;
+    }
+    footer .sumario .column.active{
+        max-height: 500px;
+    }
+    footer .sumario .column .header{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 20px;
+        border-top: 1px solid var(--bg-color5);
+        position:absolute;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 70px;
+    }
+    footer .sumario .column .header h1{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    footer .sumario .column .header .column-close{
+        font-size: 1rem;
+        display: flex;
+        right: 10%;
+        top: 40%;
+        transform: rotate(-45deg);
+        transition: .3s;
+    }
+    footer .sumario .column .header .column-close.active{
+        transform: rotate(-90deg);
+    }
+    footer .sumario .column ul{
+        padding: 10px;
+        margin-top: 60px;
     }
     /*RESPONSIVIDADE DO FOOTER EMPRESA*/
-    .devs .copyright,
-    .devs h4,.devs .about{
+    .devs{
+        position: relative;
+        width: 100%;
+        height: 50vh;
+    }
+    .devs .copyright{
+        top: 10%;
+        right: 5%;
+        width: 90%;
         font-size: .8rem;
+    }
+    .devs h4{
+        display: none;
+    }
+    .devs .about{
+        font-size: .8rem;
+        top: 45%;
         right: 2%;
     }
     .social-emp{
         top: 45%;
         left: 5%;
+        gap: 10px;
         align-items: start;
     }
     .logo-emp{

@@ -166,10 +166,12 @@
 /*RESPONSIVIDADE DOS COMPONENTES*/
 @media screen and (min-width: 100px) and (max-width: 600px){
     body .title{
-        font-size: 1.5rem;
+        font-size: 120%;
     }
     body .topico{
-        font-size: 1.8rem;
+        left: 0;
+        width: 110%;
+        font-size: 1.5rem;
     }
     body .card-box,
     body .prod-box{

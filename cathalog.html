@@ -94,8 +94,7 @@
         </div>
         <!--CONTEÚDO PRINCIPAL DA PÁGINA-->
         <main>
-            <section class="container-img" id="male">
-                <img src="./src/assets/banners/banner-male-1.webp" alt="banner-male" loading="lazy">
+            <section class="filtered-container" id="male" style="background-image: url(./src/assets/banners/banner-male-1.webp);" loading="lazy">
                 <div class="info-banner">
                     <h1 class="topico">Vestuário Masculino BC</h1>
                     <p>Apresentamos o famoso e apreciado vestuário BC Male,
@@ -137,8 +136,7 @@
                     </div>
                 </div>
             </section>
-            <section class="container-img" id="female">
-                <img src="./src/assets/banners/banner-female-1.webp" alt="banner-female" loading="lazy">
+            <section class="filtered-container" id="female" style="background-image: url(./src/assets/banners/banner-female-1.webp);" loading="lazy">
                 <div class="info-banner">
                     <h1 class="topico">Vestuário Feminino BC</h1>
                     <p>Através de nossas finas e minussiosas costuras artesanais,
@@ -180,8 +178,7 @@
                     </div>
                 </div>
             </section>
-            <section class="container-img" id="bag">
-                <img src="./src/assets/banners//banner-bag-1.webp" class="filtered-img" loading="lazy">
+            <section class="filtered-container" id="bag" style="background-image: url(./src/assets/banners/banner-bag-1.webp);" loading="lazy">
                 <div class="info-banner">
                     <h1 class="topico">Bolsas BC</h1>
                     <p>Veja as novas bolsas confeccionadas pela famosa costura BC.
@@ -225,42 +222,47 @@
         </main>
         <!--FOOTER-->
         <footer>
-            <section class="info">
-                <div class="info-column">
-                    <h2>AJUDA</h2>
-                    <p>Nossos funcionários estão a disposição para ajuda-los com quaisquer problemas ou dúvidas
-                        por email, mensagem ou telefone +55 (11) 28042-2405.
-                    </p>
-                    <a href="">Cuidados com o produto</a>
-                    <a href="">Dúvidas frequentes</a>
-                    <a href="">Suporte</a>
+            <section class="sumario">
+                <div class="column">
+                    <div class="header"><h1 class="left-d2">AJUDA</h1> <i class="bi bi-x-lg icon close column-close"></i></div>
+                    <ul class="bottom-d5">
+                        <li><a href="">Nosssos funcionaraios estão a disposição para ajuda-los com quaisquer problemas
+                            ou duvidas por email, mensagem ou telefone +55 (11) 28042-2405
+                        </a></li>
+                        <li><a href="">Cuidados com o produto</a></li>
+                        <li><a href="">Dúvidas frequentes</a></li>
+                        <li><a href="">Suporte</a></li>
+                    </ul>
                 </div>
-                <div class="info-column">
-                    <h2>SERVIÇOS</h2>
-                    <a href="">Personalização</a>
-                    <a href="">Reparos</a>
-                    <a href="">Presentes</a>
-                    <a href="">Acesse nosso aplicativo</a>
+                <div class="column">
+                    <div class="header"><h1 class="left-d1">SERVIÇOS</h1> <i class="bi bi-x-lg icon close column-close"></i></div>
+                    <ul class="bottom-d5">
+                        <li><a href="">Personalização</a></li>
+                        <li><a href="">Reparos</a></li>
+                        <li><a href="">Presentes</a></li>
+                        <li><a href="">Acesse nosso aplicativo</a></li>
+                    </ul>
                 </div>
-                <div class="info-column">
-                    <h2>SOBRE A BELLE COUTURE</h2>
-                    <a href="">Carreiras</a>
-                    <a href="">Notícias</a>
-                    <a href="">Sustentabilidade</a>
-                    <a href="">Sofisticação</a>
-                    <a href="">Eventos</a>
-                    <a href="">Fundação</a>
+                <div class="column">
+                    <div class="header"><h1 class="right-d1">BELLE COUTURE</h1> <i class="bi bi-x-lg icon close column-close"></i></div>
+                    <ul class="bottom-d5">
+                        <li><a href="">Carreiras</a></li>
+                        <li><a href="">Noticias</a></li>
+                        <li><a href="">Sustentabilidade</a></li>
+                        <li><a href="">Sofisticação</a></li>
+                        <li><a href="">Eventos</a></li>
+                        <li><a href="">Fundação</a></li>
+                    </ul>
                 </div>
-                <div class="info-column">
-                    <h2>NOVIDADES</h2>
-                    <p>Fique por dentro das notícias mais recentes e receba todas as novidades da BELLE COUTURE, 
-                        como lançamentos e eventos.
-                    </p>
-                    <div class="redes">
-                        <img src="./src/assets/img/icon-yt-preto.png" alt="REDE1" class="icon-redes">
-                        <img src="./src/assets/img/icon-instagram-preto.png" alt="REDE2" class="icon-redes">
-                        <img src="./src/assets/img/icon - x - preto.png" alt="REDE3" class="icon-redes">
-                    </div>
+                <div class="column">
+                    <div class="header"><h1 class="right-d2">NOVIDADES</h1> <i class="bi bi-x-lg icon close column-close"></i></div>
+                    <ul class="bottom-d5">
+                        <li><a href="">Fique por dentro das noticias mais recentes e receba todas as novidades da 
+                            BELLE COUTURE em nossas redes sociais</a></li>
+                        <li><a href="">BelleCoutureTV</a></li>
+                        <li><a href="">@BelleCoutureOfficial</a></li>
+                        <li><a href="">@BelleCoutureNow</a></li>
+                    </ul>
                 </div>
             </section>
             <!--FOOTER DA EMPRESA-->
@@ -271,7 +273,7 @@
                 </div>
                 <div class="social-emp">
                     <img src="./src/assets/img/icon-whatsapp.png" alt="Contato" class="icon-redes">
-                    <img src="./src/assets/img/Float-Logo.png" alt="Logo" class="logo-emp icon-redes">
+                    <img src="./src/assets/img/icon-instagram-preto.png" alt="Logo" class="icon-redes">
                 </div>
                 <h4>Feito por Float, Etec Prof Basilide de Godoy, São Paulo, SP, Brasil.</h3>
                 <a href="./float.html" target="_blank" class="about">Sobre Float.</a>

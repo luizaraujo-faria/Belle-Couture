@@ -142,18 +142,18 @@ button:hover {
 footer{
     background-color: var(--bg-color1);
 }
-.info-column a:after, .devs .about:after{
-    background-color: var(--bg-color2);
+.sumario .column .header{
+    color: var(--bg-color2);
+    background-color: var(--bg-color1);
 }
-.info-column a:hover:after, .devs .about:hover:after{
-    width: 100%;
+.sumario .column .header ul li a{
+    color: var(--bg-color2);
 }
-footer h2,.devs h4,.devs .about,.devs .copyright a,.info-column p,
-.info-column a,.info-column h2{
+.sumario .column ul li a{
     color: var(--font-color2);
 }
-.info-column a:hover{
-    color: var(--font-color5);
+footer h2,.devs h4,.devs .about,.devs .copyright a{
+    color: var(--font-color2);
 }
 /*RESPONSIVIDADE DA PAGINA PRINCIPAL*/
 @media screen and (min-width: 100px) and (max-width: 600px){
@@ -179,7 +179,8 @@ footer h2,.devs h4,.devs .about,.devs .copyright a,.info-column p,
         object-fit: cover;
     }
     .slide-title{
-        font-size: 1.5rem;
+        font-size: 150%;
+        text-align: center;
         bottom: 42%;
     }
     .slide-subtitle{
