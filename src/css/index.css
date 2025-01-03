@@ -156,7 +156,7 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
     color: var(--font-color2);
 }
 /*RESPONSIVIDADE DA PAGINA PRINCIPAL*/
-@media screen and (min-width: 100px) and (max-width: 600px){
+@media screen and (width < 640px){
     /*RESPONSIVIDADE TELA DE CARREGAMENTO*/
     .loading{
         width: 100%;

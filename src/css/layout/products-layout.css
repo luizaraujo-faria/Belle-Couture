@@ -85,11 +85,11 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
     color: var(--font-color2);
 }
 /*RESPONSIVIDADE DO LAYOUT DE PRODUTOS*/
-@media screen and (min-width: 100px) and (max-width: 600px){
-    .filtered-container .info-banner p{
+@media screen and (width < 640px){
+    body .filtered-container .info-banner p{
         display: none;
     }
-    .filtered-container .info-banner{
+    body .filtered-container .info-banner{
         left: 0;
         bottom: 0;
         width: 100%;
@@ -98,12 +98,12 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
         align-items: center;
         justify-content: center;
     }
-    .filtered-container .info-banner h1{
+    body .filtered-container .info-banner h1{
         font-size: 2.5rem;
         position: absolute;
         bottom: 10%;
     }
-    .filter-bar.show{
+    body .filter-bar.show{
         top: 7%;
     }
     body .prod-box{

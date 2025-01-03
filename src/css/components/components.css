@@ -164,7 +164,7 @@
     font-weight: 800;
 }
 /*RESPONSIVIDADE DOS COMPONENTES*/
-@media screen and (min-width: 100px) and (max-width: 600px){
+@media screen and (width < 640px){
     body .title{
         font-size: 120%;
     }
