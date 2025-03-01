@@ -1,3 +1,12 @@
+/*BARRA SCROLL*/
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: black;
+}
+body::-webkit-scrollbar-thumb{
+    
+    background-color: white;
+}
 /*HEADER*/
 header{
     background-color: var(--bg-color1);
@@ -15,6 +24,9 @@ header{
 }
 header.hidden{
     transform: translateY(-110%);
+}
+header .logo{
+    display: none;
 }
 /*ICONES DO HEADER*/
 header i{
@@ -193,6 +205,13 @@ header i{
     justify-content: start;
     flex-direction: column;
     transition: .5s;
+}
+.menu-bar::-webkit-scrollbar{
+    width: 10px;
+    background-color: black;
+}
+.menu-bar::-webkit-scrollbar-thumb{
+    background-color: white;
 }
 .menu-bar.show{
     right: 0;
@@ -404,6 +423,13 @@ footer .logo{
         position: fixed;
         z-index: 3;
     }
+    header h1{
+        display: none;
+    }
+    header .logo{
+        display: block;
+        width: 25%;
+    }
     /*RESPONSIVIDADE DOS ICONES DO HEADER*/
     header i{
         padding: 0;
@@ -419,14 +445,15 @@ footer .logo{
     }
     header .person{
         font-size: 125%;
-        left: 5%;
-    }
-    header .filter{
-        font-size: 100%;
         left: 15%;
     }
+    header .filter{
+        font-size: 125%;
+        left: 25%;
+    }
     header .bag{
-        display: none;
+        font-size: 100%;
+        left: 5%;
     }
     /*RESPONSIVIDADE DA BARRA DE MENU*/
     header .menu{
@@ -443,7 +470,7 @@ footer .logo{
         right: 5%;
     }
     body .menu-bar.show{
-        left: 0%;
+        right: 0%;
     }
     body .menu-bar nav ul{
         width: 100%;
@@ -581,9 +608,10 @@ footer .logo{
         display: none;
     }
     .devs .about{
+        position: relative;
         font-size: .8rem;
-        top: 45%;
-        right: 2%;
+        top: 0;
+        right: 5%;
     }
     .social-emp{
         top: 45%;

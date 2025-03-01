@@ -153,21 +153,6 @@ body{
     font-weight: 400;
     text-align: center;
 }
-/*FOOTER CORES PRETAS*/
-footer{
-    background-color: var(--bg-color2);
-}
-.sumario .column .header{
-    color: var(--bg-color1);
-    background-color: var(--bg-color2);
-}
-.sumario .column .header ul li a{
-    color: var(--bg-color1);
-}
-.sumario .column ul li a,footer .sumario .column .header .column-close,
-footer h2,.devs h4,.devs .about,.devs .copyright a{
-    color: var(--font-color1);
-}
 /*RESPONSIVIDADE DA PAGINA DE LOGIN*/
 @media screen and (width < 640px){
 
@@ -180,22 +165,26 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
     }
     body .cad h1 , body .login h1{
         font-size: 2rem;
+        white-space: nowrap;
     }
     .cad .op-cad{
-        width: 120%;
+        width: 130%;
     }
     body .accout h2{
         font-size: 1.5rem;
     }
     body .login p{
         font-size: 1.2rem;
+        text-align: center;
     }
     .login .input{
-        width: 120%;
+        width: 130%;
+        height: 3.2rem;
         font-size: 1rem;
     }
     .login button{
         width: 100%;
+        height: 3rem;
         z-index: 10;
     }
     body .pros{

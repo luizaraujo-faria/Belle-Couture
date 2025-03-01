@@ -16,18 +16,3 @@ function logar() {
         emailInp.focus()
     }
 }
-
-//FOOTER MOBILE//
-const mediaQuery = window.matchMedia("(width < 640px)");{
-
-    let cheader = document.querySelectorAll('.sumario .column .header')
-    let column = document.querySelectorAll('.sumario .column')
-    let cClose = document.querySelectorAll('.sumario .column .header .column-close')
-
-    cheader.forEach((cheader, index ) => {
-        cheader.addEventListener('click', () => {
-            column[index].classList.toggle('active')
-            cClose[index].classList.toggle('active')
-        })
-    })
-}

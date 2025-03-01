@@ -43,27 +43,3 @@ window.onload = function() {
             }, 825)
         },800)
 }
-/*
-//TELA DE CARREGAMENTO QUE OCORRE APENAS UMA VEZ//
-document.addEventListener('DOMContentLoaded', () => {
-    const loading = document.querySelector('.loading')
-    const logoLoad = document.querySelector('.loading .logo')
-    
-    const visited = sessionStorage.getItem('visited')
-
-    if(visited){
-        loading.style.display = "none"
-    }
-    else{
-        logoLoad.style.opacity = "1"
-        setTimeout(() => {
-            logoLoad.style.opacity = "0"
-            
-            setTimeout(() => {
-                loading.classList.add('faded')
-            }, 825)
-        },800)
-
-        sessionStorage.setItem("visited", "true")
-    }
-})*/

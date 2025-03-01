@@ -14,81 +14,100 @@
     <title>FLOAT | Official Site</title>
 </head>
 <body>
-    <header>
-        <img src="./src/assets/img/Float-Logo.png" alt="" class="logo">
-        <h1 class="topico">FLOAT</h1>
+    <header id="header">
+        <img src="./src/assets/img/Float-Logo.png" class="logo-emp" alt="Logo-Emp">
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="container" id="about">
-            <div class="content">
-                <h1 class="title">Sobre Nós</h1>
-                <article>
-                    <p>A Float é uma empresa de tecnologia especializada na criação de sites modernos e responsivos, 
-                        oferecendo soluções personalizadas que combinam design criativo e tecnologia de ponta. Nossa missão é
-                        transformar ideias em experiências digitais únicas, ajudando empresas e indivíduos a se 
-                        destacarem online com sites rápidos, otimizados e que refletem a essência de suas marcas.</p>
-                </article>
-            </div>
-            <div class="integrantes">
-                <h1 class="title">Integrantes</h1>
-                <div class="persons">
-                    <img src="./src/assets/img/foto-renato.enc" alt="">
-                    <div class="name">
-                        <h1>Renato Oliveira</h1>
-                        <h2>Back End</h2>
-                    </div>
-                </div>
-                <div class="persons">
-                    <img src="./src/assets/img/foto-nata.jpeg" alt="">
-                    <div class="name">
-                        <h1>Natã Barsotti</h1>
-                        <h2>Front end</h2>
-                    </div>
-                </div>
-                <div class="persons">
-                    <img src="./src/assets/img/foto-sammuel.jpeg" alt="">
-                    <div class="name">
-                        <h1>Sammuel Alves</h1>
-                        <h2>Designer</h2>
-                    </div>
-                </div>
-                <div class="persons">
-                    <img src="./src/assets/img/foto-luiz.jpeg" alt="">
-                    <div class="name">
-                        <h1>Luiz Henrique</h1>
-                        <h2>Full Stack</h2>
-                    </div>
-                </div>
+        <section id="home" class="container-banner">
+            <div class="info-div">
+                <h1 class="title-emp"><span class="letter">F</span><span class="letter">L</span><span class="letter">O</span><span class="letter">A</span><span class="letter">T</span></h1>
             </div>
         </section>
-        <section class="container" id="contact">
-            <div class="overlay"></div>
-            <h1 class="title">contate-nos</h1>
-            <form action="">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="text" placeholder="Seu Email" required>
-                <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-                <button type="submit" class="btn white-btn">Enviar</button>
-            </form>
-            <div class="redes">
-                <img src="./src/assets/img/icon - x - branco.png" alt="" class="icon-redes">
-                <img src="./src/assets/img/icon-instagram-branco.png" alt="" class="icon-redes">
-                <img src="./src/assets/img/icon-whatsapp-branco.png" alt="" class="icon-redes">
-                <img src="./src/assets/img/icon-github-branco.png" alt="" class="icon-redes">
+        <section id="about" class="container">
+            <div class="about">
+                <img src="./src/assets/img/Float-Logo.png" class="logo-img" alt="IMAGEM">
+                <article >
+                    <div class="typing-box">
+                        <h2 class="subtitle-emp">Flutue na <span class="subtitle-content"></span></h2>
+                    </div>
+                    <p>A <span class="span">Float</span> é uma empresa de <span class="span">técnologia</span> focada no desenvolvimento de <span class="span">websites modernos</span>, rápidos e responsivos. Criamos soluções personalizadas que unem design <span class="span">criativo e tecnológico</span> de ponta, ajudando empresas e indivíduos a se destacarem no meio digital com experiências únicas e <span class="span">eficiêntes</span>.</p>
+                </article>
             </div>
+            <section class="integrantes">
+                <div class="slider">
+                    <div class="cards">
+                        <img src="./src/assets/img/foto-luiz.jpeg" class="foto-integrante" alt="Foto-Integrante">
+                        <div class="info-list">
+                            <h1>Luiz Henrique Araujo Farias</h1>
+                            <h2>Full-Stack</h2>
+                            <div>
+                                <img src="./src/assets/img/icon-github-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-instagram-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-linkedin.png" class="icon-rede" alt="Icon-Rede">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="./src/assets/img/foto-renato.enc" class="foto-integrante" alt="Foto-Integrante">
+                        <div class="info-list">
+                            <h1>Renato Oliveira Cordeiro</h1>
+                            <h2>Back-End</h2>
+                            <div>
+                                <img src="./src/assets/img/icon-github-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-instagram-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-linkedin.png" class="icon-rede" alt="Icon-Rede">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="./src/assets/img/foto-nata.jpeg" class="foto-integrante" alt="Foto-Integrante">
+                        <div class="info-list"i>
+                            <h1>Natâ Barsotti Plaça</h1>
+                            <h2>Front-End</h2>
+                            <div>
+                                <img src="./src/assets/img/icon-github-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-instagram-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-linkedin.png" class="icon-rede" alt="Icon-Rede">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <img src="./src/assets/img/foto-sammuel.jpeg" class="foto-integrante" alt="Foto-Integrante">
+                        <div class="info-list">
+                            <h1>Sammuel Alves</h1>
+                            <h2>Designer</h2>
+                            <div>
+                                <img src="./src/assets/img/icon-github-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-instagram-branco.png" class="icon-rede" alt="Icon-Rede">
+                                <img src="./src/assets/img/icon-linkedin.png" class="icon-rede" alt="Icon-Rede">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="contact" class="container">
+            <form action="">
+                <h1>Contate-nos</h1>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Número" required>
+                <textarea name="" id="" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     <footer>
-        <img src="./src/assets/img/Float-Logo.png" alt="" class="logo">
-        <h1 class="topico">FLOAT</h1>
-        <p>@2024-TodosOsDireitosReservados</p>
+        <h3>©2024 - TodosOsDireitosReservados</h3>
+        <h3>Por - FLOAT</h3>
     </footer>
 </body>
+<script src="./src/js/float.js"></script>
 </html>

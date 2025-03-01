@@ -1,6 +1,6 @@
 /*CONTEUDO PRINCIPAL DA PAGINA*/
 .container{
-    height: 130vh;
+    height: 150vh;
 }
 .filtered-container .info-banner{
     position: absolute;
@@ -51,6 +51,12 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
 }
 /*RESPONSIVIDADE DO LAYOUT DE PRODUTOS*/
 @media screen and (width < 640px){
+    body .container{
+        height: 130vh;
+    }
+    body .filtered-container{
+        height: 60vh;
+    }
     body .filtered-container .info-banner p{
         display: none;
     }

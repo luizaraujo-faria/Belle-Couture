@@ -28,12 +28,10 @@
 .container:nth-child(6){
     height: 120vh;
 }
-.container:nth-child(2),
-.container:nth-child(6){
+.container:nth-child(2){
     background-color: var(--bg-color2);
 }
-.container:nth-child(2) h1,
-.container:nth-child(6) h1{
+.container:nth-child(2) h1{
     color: var(--font-color1);
 }
 .container:nth-child(2) h1,
@@ -179,14 +177,13 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
         object-fit: cover;
     }
     .slide-title{
-        font-size: 150%;
-        text-align: center;
-        bottom: 42%;
+        font-size: 2rem;
+        bottom: 40%;
     }
     .slide-subtitle{
         font-size: 1rem;
-        width: 80%;
-        bottom: 35%;
+        width: 95%;
+        bottom: 32%;
         text-align: center;
     }
     .slide .btn{
@@ -195,11 +192,15 @@ footer h2,.devs h4,.devs .about,.devs .copyright a{
         bottom: 23%;
     }
     .slide:nth-child(2) h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
+        white-space: nowrap;
         top: 63%;
-        left: 25%;
+        left: 12%;
     }
     button {
         display: none;
+    }
+    body .filtered-container{
+        height: 60vh;
     }
 }

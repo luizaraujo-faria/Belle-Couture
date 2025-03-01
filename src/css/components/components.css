@@ -119,12 +119,12 @@
     color: var(--font-color1);
 }
 .cards:hover .card-img, .cards:hover p{
-    border-radius: 50px;
+    border-radius: 20px;
     text-decoration: underline;
 }
 .cards-prod{
     width: 25%;
-    height: 25rem;
+    height: 27rem;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -148,7 +148,6 @@
     width: 95%;
     height: 85%;
     background-color: var(--bg-color2);
-    border: 1px solid white;
     box-shadow: 0px 1px 3px black;
     overflow: hidden;
     position: relative;
@@ -208,7 +207,7 @@
         font-size: 1rem;
     }
     .btn{
-        width: auto;
+        width: 50%;
     }
     .icon-redes{
         width: 1.5rem;

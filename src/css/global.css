@@ -21,6 +21,12 @@
     --font-color4:#272727;
     --font-color5:#d6d6d6;
     --font-color6:#949494;
+
+    --float-color1: #0e95aa;
+    --float-color2: #0b8499;
+    --float-color3: #077387;
+    --float-color4: #046276;
+    --float-color5: #005164;
 }
 /*RESET BASICO CSS GLOBAL*/
 *{

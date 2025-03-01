@@ -45,21 +45,6 @@ menuClose.addEventListener('click', () => {
     body.classList.remove('no-scroll')
 })
 
-//FOOTER MOBILE//
-const mediaQuery = window.matchMedia("(width < 640px)");{
-
-    let cheader = document.querySelectorAll('.sumario .column .header')
-    let column = document.querySelectorAll('.sumario .column')
-    let cClose = document.querySelectorAll('.sumario .column .header .column-close')
-
-    cheader.forEach((cheader, index ) => {
-        cheader.addEventListener('click', () => {
-            column[index].classList.toggle('active')
-            cClose[index].classList.toggle('active')
-        })
-    })
-}
-
 //EFEITO HEADER//
 let lastScroll = 0
 
@@ -96,7 +81,13 @@ const pageMap = {
 }
 
 //FUNÇÃO DE CLICK PARA BOTÃO REALIZAR PESQUISA
-searchBtn.addEventListener('click', () => {
+searchBtn.addEventListener('click', searching)
+searchInp.addEventListener('keydown', (event) => {
+    if(event.key === "Enter"){
+        searching()
+    }
+})
+function searching(){
     const searchTxt = searchInp.value.toLowerCase()
     const pages = pageMap[searchTxt]
 
@@ -105,10 +96,35 @@ searchBtn.addEventListener('click', () => {
     }
     else{
         alert("Item não encontrado!")
+        searchInp.value = ""
+        searchInp.focus()
     }
-})
+}
 //FUNÇÃO DE CLICK PARA BOTÃO LIMPAR
 serachClear.addEventListener('click', () => {
     searchInp.value = ""
     searchInp.focus()
 })
+
+//FOOTER MOBILE//
+const mediaQuery = window.matchMedia("(width < 640px)");{
+
+    let cheader = document.querySelectorAll('.sumario .column .header')
+    let column = document.querySelectorAll('.sumario .column')
+    let cClose = document.querySelectorAll('.sumario .column .header .column-close')
+
+    cheader.forEach((cheader, index ) => {
+        cheader.addEventListener('click', () => {
+
+            column.forEach((column, i) => {
+                if(i !== index){
+                    column.classList.remove('active')
+                    cClose[i]?.classList.remove('active')
+                }
+            })
+
+            column[index].classList.toggle('active')
+            cClose[index].classList.toggle('active')
+        })
+    })
+}
