@@ -105,7 +105,6 @@ serachClear.addEventListener('click', () => {
     searchInp.value = ""
     searchInp.focus()
 })
-
 //FOOTER MOBILE//
 const mediaQuery = window.matchMedia("(width < 640px)");{
 
